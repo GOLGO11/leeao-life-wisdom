@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>李敖人生智慧</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="kicker">大李敖全集 6.0 提炼成果</p>
+        <h1>李敖人生智慧</h1>
+        <p id="datasetSummary" class="summary">正在读取数据...</p>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="toolbar" aria-label="检索筛选">
+        <label class="sr-only" for="searchInput">搜索</label>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索标题、正文、书名、来源" />
+
+        <label class="sr-only" for="bookSelect">书籍</label>
+        <select id="bookSelect"></select>
+
+        <label class="sr-only" for="tagInput">主题</label>
+        <input id="tagInput" list="tagList" autocomplete="off" placeholder="主题" />
+        <datalist id="tagList"></datalist>
+
+        <button id="resetBtn" type="button">重置</button>
+      </section>
+
+      <section class="result-head">
+        <div>
+          <p class="kicker">结果</p>
+          <h2 id="resultTitle">全部条目</h2>
+          <p id="resultMeta" class="summary"></p>
+        </div>
+        <nav class="pager" aria-label="分页">
+          <button id="prevPage" type="button" aria-label="上一页">上一页</button>
+          <span id="pageInfo">1 / 1</span>
+          <button id="nextPage" type="button" aria-label="下一页">下一页</button>
+        </nav>
+      </section>
+
+      <section id="cards" class="cards" aria-live="polite"></section>
+    </main>
+
+    <script src="data/wisdom-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
