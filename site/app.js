@@ -35,6 +35,7 @@ const items = rawData.items.map((item, index) => {
       item.book,
       item.source_file,
       item.source_chapter,
+      item.source_text,
       item.wisdom_title,
       item.wisdom_text,
       item.theme_tags,
@@ -158,6 +159,21 @@ function createCard(item) {
   });
 
   card.append(id, title, text, meta);
+
+  if (item.source_text) {
+    const source = document.createElement("details");
+    source.className = "source-evidence";
+
+    const summary = document.createElement("summary");
+    summary.textContent = "原文依据";
+
+    const sourceText = document.createElement("p");
+    sourceText.textContent = item.source_text;
+
+    source.append(summary, sourceText);
+    card.append(source);
+  }
+
   return card;
 }
 

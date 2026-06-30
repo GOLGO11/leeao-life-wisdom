@@ -22,6 +22,7 @@ def read_rows():
         "book",
         "source_file",
         "source_chapter",
+        "source_text",
         "wisdom_title",
         "wisdom_text",
         "theme_tags",

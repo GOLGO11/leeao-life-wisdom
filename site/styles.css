@@ -196,6 +196,25 @@ button:disabled {
   padding: 3px 9px;
 }
 
+.source-evidence {
+  margin-top: 13px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.source-evidence summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.source-evidence p {
+  margin-top: 8px;
+  white-space: pre-wrap;
+}
+
 .empty {
   border: 1px dashed var(--line);
   border-radius: 8px;
